@@ -58,16 +58,25 @@ function HomePageAdmin() {
   const ShowProducts = () => {
     return (
       <>
-        <div className="buttons text-center py-5" style={{backgroundColor:"#000000"}}>
-          <button className="btn btn-outline-light btn-sm m-2" style={{fontSize:"1.5rem"}} onClick={() => setFilter(data)}>All</button>
-          {categorie.map((cat)=>{
-            const name=cat.categoryName;
-            console.log(BASE_URL + cat.id );
-            return <button className="btn btn-outline-light btn-sm m-2" style={{fontSize:"1.5rem"}} onClick={() => filterProduct(cat.id)}>{cat.categoryName}</button>
-          })}
-
+       
+         
+        <div className="col-md-3">
+          <div className="sidebar">
+            <div className="buttons text-center py-3" style={{ backgroundColor: "#000000" }}>
+              <button className="btn btn-link text-white btn-lg m-2" style={{ fontSize: "1.3rem", color: "#ffffff", border: "none", textDecoration: "none", cursor: "pointer", transition: "box-shadow 0.3s", display: "block", width: "90%"  }} onClick={() => setFilter(data)}>All</button>
+              {categorie.map((cat) => {
+                const name = cat.categoryName;
+                console.log(BASE_URL + cat.id);
+                return <button key={cat.id} className="btn btn-link text-white btn-lg m-2" style={{ fontSize: "1.3rem", color: "#ffffff", border: "none", textDecoration: "none", cursor: "pointer", transition: "box-shadow 0.3s", display: "block", width: "90%"  }} onClick={() => filterProduct(cat.id)}>{cat.categoryName}</button>
+              })}
+            </div>
+          </div>
         </div>
         
+
+        
+        <div className="col-md-9">
+          <div className="row">
         {filter.map((product) => {
           return (
             <div id={product.id} key={product.id} className="col-md-4 col-sm-6 col-xs-8 col-12 mb-4">
@@ -99,12 +108,17 @@ function HomePageAdmin() {
                 <Link to="/updateform" state={product.id} className="btn btn-dark m-1">
           Update Product
         </Link>
+        <Link to="/deleteform" state={product.id} className="btn btn-danger m-1">
+                Delete Product
+                </Link>
                 </div>
               </div>
             </div>
 
           );
         })}
+        </div>
+        </div>
       </>
     );
   };
