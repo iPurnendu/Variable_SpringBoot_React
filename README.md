@@ -1,6 +1,7 @@
-# E-Commerce Website
+# Variable Electronics E-commerce Website
 
-A Ecommerce Website made with React.js Framework and in backend using SpringBoot.
+Variable Electronics E-commerce is a user-friendly platform built with React for the frontend, J2EE (Spring Boot) for the backend, and MySQL for the database. Using Redux for state management, the website incorporates JWT tokens for secure user authentication and role-based login, allowing seamless access for User, Admin, and Company roles. The MVC architecture ensures organized development, while Axios serves as middleware for efficient communication.Variable Electronics E-commerce offers a secure, efficient, and enjoyable shopping experience for electronics enthusiasts.
+
 
 ## Screenshots
 
