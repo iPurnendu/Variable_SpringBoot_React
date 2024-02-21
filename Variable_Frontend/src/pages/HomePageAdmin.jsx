@@ -112,13 +112,14 @@ function HomePageAdmin() {
                 Delete Product
                 </Link>
                 </div>
+                </div>
               </div>
-            </div>
 
           );
         })}
         </div>
         </div>
+        
       </>
     );
   };

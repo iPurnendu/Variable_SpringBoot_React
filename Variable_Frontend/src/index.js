@@ -12,6 +12,7 @@ import { Navbar } from './components';
 import AddCategory from './pages/AddCategory';
 import UpdateProduct from './pages/HomePageAdmin';
 import UpdateFormAdmin from './pages/UpdateFormAdmin';
+import DeleteFormAdmin from './pages/DeleteFormAdmin';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,6 +39,7 @@ root.render(
         <Route path="/users" element={< AllUsersPage />}/>
         <Route path="/updateform" element={< UpdateFormAdmin />}/>
         <Route path="/placedorders" element={< OrdersPage />}/>
+        <Route path="/deleteform" element={<DeleteFormAdmin/>}/>
       </Routes>
     </Provider>
   </BrowserRouter>

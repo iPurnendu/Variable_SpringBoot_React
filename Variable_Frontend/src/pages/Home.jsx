@@ -8,8 +8,8 @@ function Home() {
      
      
       <HomeCarousel/>
-      <Carousel/>
-      {/* <Product /> */}
+      {/* <Carousel/> */}
+      <Product />
       <Footer />
     </>
   )
